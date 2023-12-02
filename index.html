@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visa Card</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card" data-tilt>
+        <div class="card-inner">
+          <div class="front">
+            <img src="./images/front-bg.png" class="map-img" />
+            <div class="row">
+              <img src="https://i.ibb.co/G9pDnYJ/chip.png" width="60px" />
+              <img src="https://i.ibb.co/WHZ3nRJ/visa.png" width="80px" />
+            </div>
+
+            <input
+              id="input"
+              class="card-no"
+              type="number"
+              path="note"
+              placeholder="**** **** **** 2345"
+              minlength="16"
+              maxlength="16"
+            />
+            <div class="row">
+              <div class="card-holder">
+                <p>Card Holder Name</p>
+                <input type="text" placeholder="Mohammed Hossain" />
+              </div>
+
+              <div class="card-holder">
+                <p>Expiry Date</p>
+
+                <input placeholder="02/30" type="text" name="expiry" />
+              </div>
+            </div>
+          </div>
+
+          <div class="back">
+            <p>For customer service, call:+123-456-789 or +0-000-123</p>
+            <div class="bar"></div>
+            <div class="row card-cvv">
+              <div>
+                <img src="https://i.ibb.co/S6JG8px/pattern.png" />
+              </div>
+              <!-- <p>123</p> -->
+              <input type="number" placeholder="123" />
+            </div>
+            <div class="row card-text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                repellendus quas, rem explicabo adipisci maiores omnis vero.
+                Iure deleniti doloribus doloremque rem?
+                <br />
+                Lorem ipsum dolor sit. Iste optio dolor ipsa alias assumenda
+                quam?
+              </p>
+            </div>
+            <div class="row signature">
+              <p>CUSTOMER SIGNATURE</p>
+              <img src="https://i.ibb.co/WHZ3nRJ/visa.png" width="80px" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="tilt.js"></script>
+    <script>
+      // <!-- Rotate Animation -->
+      const outer = document.querySelector(".container");
+      const inner = document.querySelector(".card-inner");
+      outer.addEventListener("click", (e) => {
+        e.target === outer && inner.classList.toggle("rotateY");
+      });
+    </script>
+  </body>
+</html>
